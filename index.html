@@ -46,6 +46,9 @@
   .tag{ font-family:'IBM Plex Mono', monospace; font-size:11px; padding:4px 9px; background: var(--paper-dark); border:1px solid var(--paper-line); border-radius:20px; color: var(--muted); }
   .card a.visit{ display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color: var(--paper); background: var(--ink); padding:11px 16px; border-radius:2px; text-decoration:none; width:fit-content; }
   .card a.visit:hover{ background:#232f3c; }
+  .card-links{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .card a.source{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.08em; text-transform:uppercase; color: var(--brass-deep); text-decoration:none; }
+  .card a.source:hover{ text-decoration:underline; }
 
   .note{ font-size:12.5px; color: rgba(237,231,216,0.45); margin-top:8px; line-height:1.6; }
 
@@ -101,7 +104,10 @@
         <span class="tag">AI image prompts</span>
         <span class="tag">Live AI generation</span>
       </div>
-      <a class="visit" href="https://shelf-copy.vercel.app/" target="_blank" rel="noopener">Open Shelf Ready →</a>
+      <div class="card-links">
+        <a class="visit" href="https://shelf-copy.vercel.app/" target="_blank" rel="noopener">Open Shelf Ready →</a>
+        <a class="source" href="https://github.com/fifieljerari/shelf-copy" target="_blank" rel="noopener">View source on GitHub</a>
+      </div>
     </div>
 
     <div class="card">
@@ -113,7 +119,10 @@
         <span class="tag">Risk scoring</span>
         <span class="tag">Launch planning</span>
       </div>
-      <a class="visit" href="https://market-entry-dossier.vercel.app/" target="_blank" rel="noopener">Open Market Entry Dossier →</a>
+      <div class="card-links">
+        <a class="visit" href="https://market-entry-dossier.vercel.app/" target="_blank" rel="noopener">Open Market Entry Dossier →</a>
+        <a class="source" href="https://github.com/fifieljerari/market-entry-dossier" target="_blank" rel="noopener">View source on GitHub</a>
+      </div>
       <div class="note">This one runs live AI research per request, so it takes 10–20 seconds per report — that's it actually working, not lag.</div>
     </div>
 
@@ -126,7 +135,10 @@
         <span class="tag">Budget split</span>
         <span class="tag">Connects the other two tools</span>
       </div>
-      <a class="visit" href="https://launch-planner-two.vercel.app/" target="_blank" rel="noopener">Open Launch Planner →</a>
+      <div class="card-links">
+        <a class="visit" href="https://launch-planner-two.vercel.app/" target="_blank" rel="noopener">Open Launch Planner →</a>
+        <a class="source" href="https://github.com/fifieljerari/launch-planner" target="_blank" rel="noopener">View source on GitHub</a>
+      </div>
     </div>
 
   </div>
