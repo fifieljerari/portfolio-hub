@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifi El Jerari — Beauty Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141d27; --paper:#EDE7D8; --paper-dark:#E1D8C2; --paper-line: rgba(20,29,39,0.14);
+    --brass:#9c7a3c; --brass-deep:#7a5e2c; --stamp-green:#3f6349;
+    --text:#1c2126; --muted:#6b6558;
+    --paper-shadow: 0 1px 0 rgba(20,29,39,0.06), 0 10px 28px -14px rgba(20,29,39,0.3);
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background: var(--ink); color: var(--text); font-family:'IBM Plex Sans', sans-serif; }
+  .frame{ max-width:900px; margin:0 auto; padding: 60px 22px 70px; }
+
+  .hero{ color: var(--paper); margin-bottom: 40px; }
+  .eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color: rgba(237,231,216,0.55); margin-bottom:14px; }
+  .name{ font-family:'Fraunces', serif; font-weight:600; font-size: clamp(32px, 5.5vw, 52px); line-height:1.05; margin:0 0 16px; }
+  .tagline{ font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size: clamp(18px, 2.4vw, 23px); color: rgba(237,231,216,0.9); max-width:640px; line-height:1.5; margin:0 0 18px; }
+  .sub{ font-size:14.5px; color: rgba(237,231,216,0.6); max-width:600px; line-height:1.6; }
+
+  .section-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color: rgba(237,231,216,0.5); margin: 44px 0 16px; }
+
+  .flow{ display:flex; align-items:stretch; gap:14px; }
+  .flow-step{ background: var(--paper); border-radius:4px; box-shadow: var(--paper-shadow); padding:16px 18px; display:flex; flex-direction:column; gap:5px; flex:1; min-width:0; }
+  .flow-title{ font-family:'Fraunces', serif; font-weight:600; font-size:16px; color: var(--ink); }
+  .flow-sub{ font-family:'IBM Plex Mono', monospace; font-size:11px; color: var(--brass-deep); text-transform:uppercase; letter-spacing:0.06em; }
+  .flow-arrow{ color: rgba(237,231,216,0.4); font-size:20px; flex-shrink:0; display:flex; align-items:center; }
+  @media (max-width: 640px){
+    .flow{ flex-direction:column; align-items:center; }
+    .flow-arrow{ transform: rotate(90deg); }
+  }
+
+  .cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:18px; }
+  @media (max-width: 720px){ .cards{ grid-template-columns: 1fr; } }
+
+  .card{ background: var(--paper); border-radius:4px; box-shadow: var(--paper-shadow); padding: 26px 26px 24px; display:flex; flex-direction:column; }
+  .card-label{ font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color: var(--brass-deep); margin-bottom:10px; }
+  .card h3{ font-family:'Fraunces', serif; font-weight:600; font-size:22px; margin:0 0 10px; }
+  .card p{ font-size:14.5px; line-height:1.6; color: var(--text); margin:0 0 18px; flex-grow:1; }
+  .card-tags{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px; }
+  .tag{ font-family:'IBM Plex Mono', monospace; font-size:11px; padding:4px 9px; background: var(--paper-dark); border:1px solid var(--paper-line); border-radius:20px; color: var(--muted); }
+  .card a.visit{ display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color: var(--paper); background: var(--ink); padding:11px 16px; border-radius:2px; text-decoration:none; width:fit-content; }
+  .card a.visit:hover{ background:#232f3c; }
+
+  .note{ font-size:12.5px; color: rgba(237,231,216,0.45); margin-top:8px; line-height:1.6; }
+
+  .footer{ margin-top:56px; padding-top:24px; border-top:1px solid rgba(237,231,216,0.15); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  .footer-text{ font-size:13px; color: rgba(237,231,216,0.55); line-height:1.6; max-width:520px; }
+  .footer a{ color: var(--brass); text-decoration:none; }
+  .contact-btn{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color: var(--ink); background: var(--paper); padding:10px 16px; border-radius:2px; text-decoration:none; white-space:nowrap; }
+
+  @media (max-width: 640px){
+    .frame{ padding: 40px 16px 50px; }
+    .card a.visit, .contact-btn{ min-height:44px; padding:13px 18px; box-sizing:border-box; }
+    .footer-text{ font-size:14px; }
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="hero">
+    <div class="eyebrow">Beauty Marketing — Portfolio</div>
+    <h1 class="name">Fifi El Jerari</h1>
+    <p class="tagline">A marketer who builds the tools most marketers only ask for.</p>
+    <p class="sub">Three working tools built end-to-end — strategy, content, and the code to ship it — to close the gap between a marketing idea and something a beauty brand can actually use tomorrow.</p>
+  </div>
+
+  <div class="section-label">How It Connects</div>
+  <div class="flow">
+    <div class="flow-step">
+      <span class="flow-title">Research</span>
+      <span class="flow-sub">Market Entry Dossier</span>
+    </div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">
+      <span class="flow-title">Content</span>
+      <span class="flow-sub">Shelf Ready</span>
+    </div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">
+      <span class="flow-title">Execution</span>
+      <span class="flow-sub">Launch Planner</span>
+    </div>
+  </div>
+
+  <div class="section-label">Live Projects</div>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-label">Retail Content</div>
+      <h3>Shelf Ready</h3>
+      <p>Turns one product's info into retailer-ready descriptions in seconds — tailored to each retailer's actual character limits and content rules, plus a matching AI image-generation prompt for each listing.</p>
+      <div class="card-tags">
+        <span class="tag">Multi-retailer copy</span>
+        <span class="tag">AI image prompts</span>
+        <span class="tag">Live AI generation</span>
+      </div>
+      <a class="visit" href="https://shelf-copy.vercel.app/" target="_blank" rel="noopener">Open Shelf Ready →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Market Strategy</div>
+      <h3>Market Entry Dossier</h3>
+      <p>Researches a new country and category live, then generates a launch-risk report: current competitors, current retailers, regulatory notes, positioning, content strategy, and estimated acquisition cost.</p>
+      <div class="card-tags">
+        <span class="tag">Live web research</span>
+        <span class="tag">Risk scoring</span>
+        <span class="tag">Launch planning</span>
+      </div>
+      <a class="visit" href="https://market-entry-dossier.vercel.app/" target="_blank" rel="noopener">Open Market Entry Dossier →</a>
+      <div class="note">This one runs live AI research per request, so it takes 10–20 seconds per report — that's it actually working, not lag.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Launch Execution</div>
+      <h3>Launch Planner</h3>
+      <p>Turns a market-entry strategy into an actual week-by-week launch timeline and budget split — dates and dollar amounts computed directly, with a short AI-written note on why each milestone matters.</p>
+      <div class="card-tags">
+        <span class="tag">Timeline builder</span>
+        <span class="tag">Budget split</span>
+        <span class="tag">Connects the other two tools</span>
+      </div>
+      <a class="visit" href="https://launch-planner-two.vercel.app/" target="_blank" rel="noopener">Open Launch Planner →</a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">Built with AI-assisted development — I direct the strategy, content, and quality control across every tool; AI executes the code under close review.</div>
+    <a class="contact-btn" href="mailto:eljerarififi@gmail.com">Get in touch</a>
+  </div>
+
+</div>
+</body>
+</html>
