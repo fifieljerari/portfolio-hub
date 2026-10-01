@@ -1,9 +1,10 @@
 # Portfolio Hub — Fifi El Jerari, Beauty Marketing
 
-A single landing page linking three working marketing tools: Market Entry
-Dossier (research) → Shelf Ready (content) → Launch Planner (execution).
-No backend and no AI calls of its own at runtime — it's a static page
-that just introduces and links out to the three live tools.
+A single landing page linking four working marketing tools: Market Entry
+Dossier (research) → Retail Moment Finder (timing) → Launch Planner
+(execution) → Shelf Ready (content). No backend and no AI calls of its own
+at runtime — it's a static page that just introduces and links out to the
+four live tools.
 
 **Live:** https://portfolio-hub-blush.vercel.app/
 
@@ -35,4 +36,4 @@ npx vercel --prod
 ```
 
 ## What's in this folder
-- `index.html` — the entire page (hero, the three project cards, footer)
+- `index.html` — the entire page (hero, the four project cards, footer)
