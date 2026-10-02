@@ -23,19 +23,9 @@
   .tagline{ font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size: clamp(18px, 2.4vw, 23px); color: rgba(237,231,216,0.9); max-width:640px; line-height:1.5; margin:0 0 18px; }
   .sub{ font-size:14.5px; color: rgba(237,231,216,0.6); max-width:600px; line-height:1.6; }
 
-  .section-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color: rgba(237,231,216,0.5); margin: 44px 0 16px; }
+  .section-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color: rgba(237,231,216,0.5); margin: 0 0 16px; }
 
-  .flow{ display:flex; align-items:stretch; gap:14px; }
-  .flow-step{ background: var(--paper); border-radius:4px; box-shadow: var(--paper-shadow); padding:16px 18px; display:flex; flex-direction:column; gap:5px; flex:1; min-width:0; }
-  .flow-title{ font-family:'Fraunces', serif; font-weight:600; font-size:16px; color: var(--ink); }
-  .flow-sub{ font-family:'IBM Plex Mono', monospace; font-size:11px; color: var(--brass-deep); text-transform:uppercase; letter-spacing:0.06em; }
-  .flow-arrow{ color: rgba(237,231,216,0.4); font-size:20px; flex-shrink:0; display:flex; align-items:center; }
-  @media (max-width: 640px){
-    .flow{ flex-direction:column; align-items:center; }
-    .flow-arrow{ transform: rotate(90deg); }
-  }
-
-  .cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:18px; }
+  .cards{ display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; }
   @media (max-width: 720px){ .cards{ grid-template-columns: 1fr; } }
 
   .card{ background: var(--paper); border-radius:4px; box-shadow: var(--paper-shadow); padding: 26px 26px 24px; display:flex; flex-direction:column; }
@@ -51,6 +41,7 @@
   .card a.source:hover{ text-decoration:underline; }
 
   .note{ font-size:12.5px; color: rgba(237,231,216,0.45); margin-top:8px; line-height:1.6; }
+  .card .note{ color: var(--muted); margin-top:14px; }
 
   .footer{ margin-top:56px; padding-top:24px; border-top:1px solid rgba(237,231,216,0.15); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
   .footer-text{ font-size:13px; color: rgba(237,231,216,0.55); line-height:1.6; max-width:520px; }
@@ -72,24 +63,6 @@
     <h1 class="name">Fifi El Jerari</h1>
     <p class="tagline">A marketer who builds the tools most marketers only ask for.</p>
     <p class="sub">Four working tools built end-to-end — strategy, content, and the code to ship it — to close the gap between a marketing idea and something a beauty brand can actually use tomorrow.</p>
-  </div>
-
-  <div class="section-label">How It Connects</div>
-  <div class="flow">
-    <div class="flow-step">
-      <span class="flow-title">Research</span>
-      <span class="flow-sub">Market Entry Dossier</span>
-    </div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step">
-      <span class="flow-title">Content</span>
-      <span class="flow-sub">Shelf Ready</span>
-    </div>
-    <span class="flow-arrow">→</span>
-    <div class="flow-step">
-      <span class="flow-title">Execution</span>
-      <span class="flow-sub">Launch Planner</span>
-    </div>
   </div>
 
   <div class="section-label">Live Projects</div>
@@ -133,7 +106,7 @@
       <div class="card-tags">
         <span class="tag">Timeline builder</span>
         <span class="tag">Budget split</span>
-        <span class="tag">Connects the other two tools</span>
+        <span class="tag">AI milestone notes</span>
       </div>
       <div class="card-links">
         <a class="visit" href="https://launch-planner-two.vercel.app/" target="_blank" rel="noopener">Open Launch Planner →</a>
@@ -142,9 +115,9 @@
     </div>
 
     <div class="card">
-      <div class="card-label">Learn From the Best &middot; Standalone</div>
+      <div class="card-label">Campaign Insight</div>
       <h3>Campaign Analyser</h3>
-      <p>Name any beauty campaign and get a sourced case file: the brand's situation, what was done, how it landed, and a Success / Mixed / Failure verdict, built from a live Google Search with every figure linked to its source. Sits outside the launch flow, as a way to learn from what's already worked.</p>
+      <p>Name any beauty campaign and get a sourced case file: the brand's situation, what was done, how it landed, and a Success / Mixed / Failure verdict, built from a live Google Search with every figure linked to its source.</p>
       <div class="card-tags">
         <span class="tag">Live grounded search</span>
         <span class="tag">Sourced verdicts</span>

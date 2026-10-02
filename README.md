@@ -1,11 +1,11 @@
 # Portfolio Hub — Fifi El Jerari, Beauty Marketing
 
-A single landing page linking four working marketing tools: three that
-form a launch flow, Market Entry Dossier (research) → Shelf Ready
-(content) → Launch Planner (execution), plus Campaign Analyser, a
-standalone "learn from the best" tool. No backend and no AI calls of its
-own at runtime — it's a static page that just introduces and links out to
-the live tools.
+A single landing page introducing four working beauty-marketing tools:
+Market Entry Dossier (market research), Shelf Ready (retailer copy),
+Launch Planner (launch timeline and budget) and Campaign Analyser
+(sourced campaign case files). No backend and no AI calls of its own at
+runtime — it's a static page that introduces and links out to the live
+tools.
 
 **Live:** https://portfolio-hub-blush.vercel.app/
 
